@@ -6,7 +6,6 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import _ from 'lodash';
 import * as formik from 'formik';
-import {ErrorMessage} from 'formik';
 import * as yup from 'yup';
 import { useState } from 'react';
 
@@ -69,7 +68,7 @@ const ContactCard = () => {
                 });
         }else {
             console.log('you failed to properly enter information for: '+valid.item+'. --'+valid.msg);
-            setResults(false);
+            setResults(true);
             setMyData('Error');
 
             console.log(showResults, myData)
@@ -244,7 +243,7 @@ const ContactCard = () => {
                                                         { monthOptions }
                                                 </Form.Select>
                                             </FloatingLabel> 
-                                            {errors.month && touched.month ? ( <div className="err-msg" style={{'margin-top': '6px'}}>{errors.month}</div>) : null}
+                                            {errors.month && touched.month ? ( <div className="err-msg" style={{'marginTop': '6px'}}>{errors.month}</div>) : null}
                                             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                         </Form.Group>
 
@@ -268,7 +267,7 @@ const ContactCard = () => {
                                                         { _.range(2024, 1924 + 1).map(value => <option key={value} value={value}>{value}</option>) }
                                                 </Form.Select>
                                             </FloatingLabel> 
-                                            {errors.year && touched.year ? ( <div className="err-msg" style={{'margin-top': '6px'}}>{errors.year}</div>) : null}
+                                            {errors.year && touched.year ? ( <div className="err-msg" style={{'marginTop': '6px'}}>{errors.year}</div>) : null}
                                             <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                         </Form.Group>
                                     </Row>
