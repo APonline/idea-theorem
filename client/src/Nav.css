@@ -1,0 +1,30 @@
+nav {
+    background-color:#272f3c;
+    height:56px;
+}
+
+.logo {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 56px;
+    width: auto;
+    position: relative;
+    
+    img {
+        position: absolute;
+        left:0px;
+        height:30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        height:49px;
+    }
+
+    .logo {
+        height:49px;
+        margin-left: 10px;
+    }
+}

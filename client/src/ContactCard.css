@@ -1,0 +1,182 @@
+.contact {
+    margin:20px auto 40px auto;
+    width:485px;
+    height:auto;
+}
+
+.card-inner {
+    border-radius:6px;
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.15);
+    margin:20px auto 40px auto;
+    padding: 40px;
+    width:100%;
+    height:auto;
+    min-height:200px;
+}
+
+fieldset {
+    margin:5px 0;
+}
+legend {
+    font-size:10px;
+}
+.required {
+    color: red;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1* var(--bs-gutter-y));
+}
+
+label {
+    font-weight: bold;
+    font-size:12px;
+}
+
+input, option, select {
+    font-size:12px!important;
+}
+
+.form-floating>.form-select, .form-floating>.form-control {
+    height: 2.7rem;
+    min-height: 2.7rem;
+    line-height: 1.25;
+}
+.form-floating>.form-select, .form-floating>.form-control {
+    padding-top: 0.625rem!important;
+    padding-bottom: 0.625rem!important;
+}
+
+.form-control~label, .form-floating>.form-select~label {
+    font-size:10px;
+    top: 0px;
+    opacity:0;
+    transition: opacity .2s ease-in-out;
+    background-color:#fff;
+    padding: 0 0.25rem!important;
+    height: 15px;
+    margin-left: 8px;
+}
+.form-control:focus~label,  .form-floating>.form-select:focus~label {
+    opacity:1;
+    transition: opacity .2s ease-in-out;
+}
+
+.form-control~label:after, .form-select~label:after {
+    content: '* ' !important;
+    color: red;
+    position: relative !important;
+    top: 0px !important;
+    left: 5px !important;
+}
+
+.form-floating>.form-control:not(:placeholder-shown) {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    height: 2.7rem;
+    min-height: 2.7rem;
+    line-height: 1.25;
+}
+
+.form-buttons {
+    width: 300px;
+    position: relative;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    button {
+        padding: 5px 40px;
+    }
+}
+
+.dmy {
+    width: calc(100% / 3);
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+
+#results {
+    position: absolute;
+    padding: 36px 40px;
+    justify-content: center;
+    border-radius: 6px;
+    z-index: 2;
+    right: -70px;
+    top: 40px;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        font-weight: bold;
+
+        span {
+            margin-right:10px;
+        }
+
+        p {
+            margin:0;
+        }
+    }
+}
+
+.Success {
+    background-color:#c6fad2;
+}
+.Error {
+    background-color:#fbb1b3;
+}
+
+.err-msg {
+    color: red;
+    font-size: 8px;
+    text-transform: capitalize;
+    margin-top: -10px;
+}
+input.invalid, select.invalid {
+    border-color: red;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .contact {
+        margin:60px 0 40px 0;
+        width:100%;
+    }
+
+    .card-inner {
+        padding:20px;
+    }
+
+    #results {
+        right: inherit;
+        top: inherit;
+        position:relative;
+    }
+
+    .form-buttons {
+        width: 100%;
+        position: relative;
+        padding: 0 40px;
+        margin:0;
+        flex-direction: column;
+
+        button:first-child {
+            margin-bottom: 20px;
+        }
+    }
+}
